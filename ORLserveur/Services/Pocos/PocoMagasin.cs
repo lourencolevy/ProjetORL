@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ORLserveur.Services.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,7 +22,7 @@ namespace ORLserveur.Services.Pocos
     /// Méthode 
     ///     * string DN() 
     /// </summary>
-    public class PocoMagasin
+    public class PocoMagasin : IPoco
     {
     }
 }

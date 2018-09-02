@@ -33,5 +33,6 @@ namespace ORLserveur.DTO
 
         public DtoGamme Gamme { get; set; }
         public DtoMarque Marque { get; set; }
+        
     }
 }

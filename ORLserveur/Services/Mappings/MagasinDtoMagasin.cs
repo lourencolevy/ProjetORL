@@ -1,4 +1,5 @@
 ﻿using ORLserveur.DTO;
+using ORLserveur.DTO.Interfaces;
 using ORLserveur.Services.Pocos;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace ORLserveur.Services.Mappings
     /// </summary>
     static class MagasinDtoMagasin
     {
-        public static DtoMagasin Map(DtoMagasin aMagasin, DtoEnseigne aEnseigne, PocoMagasin aPocomagasin)
+        public static DtoMagasin Map(IDtoAfficheMagasin aMagasin, DtoEnseigne aEnseigne, PocoMagasin aPocomagasin)
         {
             DtoMagasin oDtoMagasin = new DtoMagasin();
             oDtoMagasin.IdMagasin = aMagasin.Id;
@@ -56,6 +57,9 @@ namespace ORLserveur.Services.Mappings
             oDtoMagasin.NbrVisiteMag = aPocomagasin.NbrVisiteMag;
             oDtoMagasin.ListDnHistoMag = aPocomagasin.ListDnHistoMag;
             oDtoMagasin.ListDateHistoMag = aPocomagasin.ListDateHistoMag;
+
+           
+
             return oDtoMagasin;
         }
 

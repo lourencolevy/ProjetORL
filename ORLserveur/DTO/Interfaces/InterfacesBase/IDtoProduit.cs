@@ -12,6 +12,7 @@ namespace ORLserveur.DTO.Interfaces.InterfacesBase
     /// 
     /// Ici il faut donc faire la même chose
     /// que l'exemple avec ces variables :
+    ///     * NomProduit
     ///     * IdProduit
     ///     * IdGammeProduit
     ///     * CodeBarreProduit

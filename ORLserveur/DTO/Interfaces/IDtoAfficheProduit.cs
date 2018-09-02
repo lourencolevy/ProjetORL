@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ORLserveur.DTO.Interfaces.InterfacesBase;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,13 +13,10 @@ namespace ORLserveur.DTO.Interfaces
     /// 
     /// Ici il faut donc faire la même chose
     /// que l'exemple avec ces variables :
-    ///     *ListNomProduit
-    ///     *ListIdProduit
-    ///     *ListNomGamme
-    ///     *ListIdGamme
-    ///     *IdProduit
-    ///     *NomProduit
-    ///     *IdGammeProduit
+    ///     
+    ///     *
+    ///     *
+    ///     *
     ///     *NomGammeProduit
     ///     *IdRayonProduit
     ///     *NomRayonProduit
@@ -35,7 +33,7 @@ namespace ORLserveur.DTO.Interfaces
     ///     *PourcRuptureProduit // Pourcentage de Rupture du produit // decimal
     ///     *PourcFacingProduit // Pourcentage de Facing du produit // decimal
     /// </summary>
-    interface IDtoAfficheProduit
+    interface IDtoAfficheProduit : IDtoProduit, IDtoGamme, IDtoRayon, IDtoVisite, IDtoElementGondole, IDtoPlanche
     {
 
     }

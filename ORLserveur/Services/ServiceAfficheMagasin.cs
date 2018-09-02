@@ -1,5 +1,6 @@
 ﻿using ORLserveur.DTO;
 using ORLserveur.Repositories;
+using ORLserveur.Services.Interfaces;
 using ORLserveur.Services.Mappings;
 using ORLserveur.Services.Pocos;
 using System;
@@ -18,12 +19,12 @@ namespace ORLserveur.Services
     /// 
     /// 
     /// </summary>
-    public class ServiceMagasin
+    public class ServiceAfficheMagasin : IService
     {
         private PocoMagasin pm;
         private RepositoryMagasin rm;
 
-        public ServiceMagasin()
+        public ServiceAfficheMagasin()
         {
             pm = new PocoMagasin();
             rm = new RepositoryMagasin();

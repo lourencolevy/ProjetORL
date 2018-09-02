@@ -5,7 +5,7 @@ namespace ORLserveur.DTO.Interfaces.InterfacesBase
 {
     interface IDtoEnseigne
     {
-         int Id { get; set; }
-         string Nom { get; set; }
+         int IdEnseigne { get; set; }
+         string NomEnseigne { get; set; }
     }
 }
