@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ORLserveur.DTO
+namespace ORLserveur.DTO.Interfaces
 {
     /// <summary>
-    /// Une class DTO qui stocke des données concernant le produit.
+    /// Une interface DTO qui stocke des données concernant le produit.
     /// On utilise cet class pour transferer les données 
     /// de la couche Metier vers les controleurs.
     /// 
@@ -35,9 +35,8 @@ namespace ORLserveur.DTO
     ///     *PourcRuptureProduit // Pourcentage de Rupture du produit // decimal
     ///     *PourcFacingProduit // Pourcentage de Facing du produit // decimal
     /// </summary>
-    public class DtoProduit
+    interface IDtoAfficheProduit
     {
-        //Exemple
-        List<string> ListNomProduit { get; set; }
+
     }
 }

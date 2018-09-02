@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ORLserveur.Services.Pocos
+namespace ORLserveur.Services.Mappings
 {
     /// <summary>
-    /// PocoProduit va contenir l'intelligence du serviceProduit
+    /// Cette classe map la classe Produit et DtoProduit
     /// </summary>
-    public class PocoProduit
+    public class ProduitDtoProduit
     {
     }
 }

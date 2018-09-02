@@ -2,15 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoUtilisateur : EntityBase
+    public partial class DtoUtilisateur
     {
-        public DtoUtilisateur()
-        {
-            Visite = new HashSet<DtoVisite>();
-        }
-
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }

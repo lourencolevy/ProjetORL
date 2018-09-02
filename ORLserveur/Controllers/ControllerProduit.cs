@@ -33,11 +33,11 @@ namespace ORLserveur.Controllers
     ///         _ Delete(Id)
     /// 
     /// </summary>
-    public class ControllerProduit
+    public class ControllerIProduit
     {
         [Route("api/produit")]
         [ApiController]
-        public class ControllerProduit : Controller
+        public class ControllerIProduit : Controller
         {
             //private ProduitService ps;
 

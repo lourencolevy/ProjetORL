@@ -7,10 +7,11 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using ORLserveur.Entities;
 
 namespace ORLserveur
 {
-    public class Program
+    public class Program : EntityBase
     {
         public static void Main(string[] args)
         {

@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoPlanche : EntityBase
+    public  class DtoPlanche
     {
         public int Id { get; set; }
         public string NumPlanche { get; set; }

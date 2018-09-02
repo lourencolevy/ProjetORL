@@ -1,16 +1,10 @@
-﻿using ORLserveur.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoElementGondole : EntityBase
+    public class DtoElementGondole
     {
-        public DtoElementGondole()
-        {
-            Planche = new HashSet<DtoPlanche>();
-        }
-
         public int Id { get; set; }
         public int RayonId { get; set; }
         public string Numero { get; set; }

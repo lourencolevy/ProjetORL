@@ -2,15 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoRayon : EntityBase
+    public class DtoRayon
     {
-        public DtoRayon()
-        {
-            ElementGondole = new HashSet<DtoElementGondole>();
-        }
-
         public int Id { get; set; }
         public int MagasinId { get; set; }
         public string NumRayon { get; set; }

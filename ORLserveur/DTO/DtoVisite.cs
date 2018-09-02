@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoVisite  : EntityBase
+    public class DtoVisite
     {
         public int Id { get; set; }
         public int UserId { get; set; }

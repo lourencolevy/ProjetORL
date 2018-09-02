@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Services\Interfaces\" />
-    <Folder Include="Services\Mappings\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

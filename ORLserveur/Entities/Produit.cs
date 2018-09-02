@@ -1,9 +1,10 @@
-﻿using System;
+﻿using ORLserveur.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class Produit
+    public partial class Produit : EntityBase
     {
         public int Id { get; set; }
         public int GammeId { get; set; }
@@ -12,7 +13,7 @@ namespace ORLserveur
         public string Debut { get; set; }
         public string Fin { get; set; }
 
-        public Gamme Gamme { get; set; }
-        public Marque Marque { get; set; }
+        public DtoGamme Gamme { get; set; }
+        public DtoMarque Marque { get; set; }
     }
 }

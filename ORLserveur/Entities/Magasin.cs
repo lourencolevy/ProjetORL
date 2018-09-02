@@ -1,13 +1,14 @@
-﻿using System;
+﻿using ORLserveur.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class Magasin
+    public partial class DtoMagasin : EntityBase
     {
-        public Magasin()
+        public DtoMagasin()
         {
-            Rayon = new HashSet<Rayon>();
+            Rayon = new HashSet<DtoRayon>();
         }
 
         public int Id { get; set; }
@@ -19,6 +20,6 @@ namespace ORLserveur
         public string Typo { get; set; }
         public int EnseigneId { get; set; }
 
-        public ICollection<Rayon> Rayon { get; set; }
+        public ICollection<DtoRayon> Rayon { get; set; }
     }
 }

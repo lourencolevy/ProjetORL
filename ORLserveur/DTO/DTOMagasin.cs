@@ -1,38 +1,21 @@
-﻿using System;
+﻿using ORLserveur.DTO.Interfaces.InterfacesBase;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ORLserveur.DTO
 {
-    /// <summary>
-    /// Une class DTO qui stocke des données concernant les magasins.
-    /// On utilise cet class pour transferer les données 
-    /// de la couche Metier vers les controleurs.
-    /// 
-    /// Ici il faut donc faire la même chose
-    /// que l'exemple avec ces variables :
-    ///     *IdMag
-    ///     *NomMag
-    ///     *Adresse1Mag
-    ///     *CodePostalMag
-    ///     *VilleMag
-    ///     *TypoMag
-    ///     *IdEnseigneMag
-    ///     *NomEnseigneMag
-    ///     *DnMag // Pourcentage donc decimal // Dn= Distribution Numérique => Dn= (Nbr Magasin qui ont le produit / Nbr Magasin qui propose un produit de cette gamme)*100
-    ///     *NbrProduitRuptureMag
-    ///     *ListPourcProduitMag // List<String> 
-    ///     *ListNomProduitMag // List<string>
-    ///     *IdListNomProduitMag// List<int>
-    ///     *NbrVisiteMag
-    ///     *ListDnHistoMag // Liste de Dn pour faire un diagramme historique
-    ///     *ListDateHistoMag  // Liste de date pour le diagramme historique
-    /// </summary>
-    public class DtoMagasin
+    public class DtoMagasin 
     {
-        //Exemple
 
-        public int IdMag {get;set;}
+        public int Id { get; set; }
+        public string Adresse1 { get; set; }
+        public string Adresse2 { get; set; }
+        public string Adresse3 { get; set; }
+        public string CodePostal { get; set; }
+        public string Ville { get; set; }
+        public string Typo { get; set; }
+        public int EnseigneId { get; set; }
+
+        public ICollection<DtoRayon> ListDtoRayon { get; set; }
     }
 }

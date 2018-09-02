@@ -33,58 +33,57 @@ namespace ORLserveur.Controllers
     ///         _ Delete(Id)
     /// 
     /// </summary>
-    public class ControlleurMagasin
+
+    [Route("api/produit")]
+    [ApiController]
+    public class ControlleurIMagasin : Controller
     {
-        [Route("api/produit")]
-        [ApiController]
-        public class ControlleurMagasin : Controller
+        //TODO créer l'objet ps de type ProduitService et l'utiliser pour implémenter les méthodes
+        //private ServiceMagasin sm;
+
+        public ControlleurIMagasin()
         {
-            //TODO créer l'objet ps de type ProduitService et l'utiliser pour implémenter les méthodes
-            //private ServiceMagasin sm;
+            //  this.sm = new ServiceMagasin();
+        }
 
-            public ControlleurMagasin()
-            {
-                //  this.sm = new ServiceMagasin();
-            }
+        //TODO Implémenter
+        // GET api/values
+        [HttpGet]
+        public IEnumerable<IDtoProduit> Get()
+        {
+            IEnumerable<IDtoProduit> ListDtoProduit = null;
+            return ListDtoProduit;
+        }
 
-            //TODO Implémenter
-            // GET api/values
-            [HttpGet]
-            public IEnumerable<DtoProduit> Get()
-            {
-                IEnumerable<DtoProduit> ListDtoProduit = null;
-                return ListDtoProduit;
-            }
+        //TODO Implémenter
+        // GET api/values/5
+        [HttpGet("{id}")]
+        public IEnumerable<IDtoProduit> Get(int id)
+        {
+            IEnumerable<IDtoProduit> ListDtoProduit = null;
+            return ListDtoProduit;
+        }
 
-            //TODO Implémenter
-            // GET api/values/5
-            [HttpGet("{id}")]
-            public IEnumerable<DtoProduit> Get(int id)
-            {
-                IEnumerable<DtoProduit> ListDtoProduit = null;
-                return ListDtoProduit;
-            }
+        //TODO Implémenter
+        // POST api/value
+        [HttpPost]
+        public void Post([FromBody]string value)
+        {
+        }
 
-            //TODO Implémenter
-            // POST api/value
-            [HttpPost]
-            public void Post([FromBody]string value)
-            {
-            }
+        //TODO Implémenter
+        // PUT api/values/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody]string value)
+        {
+        }
 
-            //TODO Implémenter
-            // PUT api/values/5
-            [HttpPut("{id}")]
-            public void Put(int id, [FromBody]string value)
-            {
-            }
-
-            //TODO Implémenter
-            // DELETE api/values/5
-            [HttpDelete("{id}")]
-            public void Delete(int id)
-            {
-            }
+        //TODO Implémenter
+        // DELETE api/values/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
         }
     }
+
 }

@@ -2,16 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoMarque : EntityBase
+    public class DtoMarque
     {
-        public DtoMarque()
-        {
-            Produit = new HashSet<Produit>();
-            Utilisateur = new HashSet<DtoUtilisateur>();
-        }
-
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Addresse1 { get; set; }

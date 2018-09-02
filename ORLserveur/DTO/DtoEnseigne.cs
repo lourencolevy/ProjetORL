@@ -1,10 +1,9 @@
-﻿using ORLserveur.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.DTO
 {
-    public partial class DtoEnseigne : EntityBase
+    public class DtoEnseigne
     {
         public int Id { get; set; }
         public string Nom { get; set; }

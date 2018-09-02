@@ -1,19 +1,20 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ORLserveur.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityFTest.repositories
+namespace ORLserveur.repositories
 {
-    // <summary>
+    /// <summary>
     /// classe abstraite permettant d'avoir un Crud de base
     /// </summary>
-    /// <typeparam name = "C" > Entité du contexte</typeparam>
-    //   / <typeparam name = "T" > contexte configuré</typeparam>
+    /// <typeparam name="C"> Entité du contexte </typeparam>
+    /// <typeparam name="T"> contexte configuré </typeparam>
     public abstract class CrudRepository<C, T>
-    where T : EntityBase where C : DbContext, new()
+     where T : EntityBase where C : DbContext, new()
     {
 
         private C _context = new C();
@@ -24,7 +25,7 @@ namespace EntityFTest.repositories
             set { _context = value; }
         }
 
-        public virtual IQueryable<T> GetAll()
+        public virtual IQueryable<T> FindAll()
         {
             IQueryable<T> query = _context.Set<T>();
             return query;

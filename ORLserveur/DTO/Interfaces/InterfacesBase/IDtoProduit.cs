@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ORLserveur.DTO
+namespace ORLserveur.DTO.Interfaces.InterfacesBase
 {
     /// <summary>
     /// Une class DTO qui stocke des données concernant le produit.
@@ -21,17 +21,17 @@ namespace ORLserveur.DTO
     ///     * 
     ///     * 
     /// </summary>
-    public class DtoProduit
+    interface IDtoProduit
     {
         //Exemple
-        public int Id { get; set; }
-        public int GammeId { get; set; }
-        public string CodeBarre { get; set; }
-        public int MarqueId { get; set; }
-        public string Debut { get; set; }
-        public string Fin { get; set; }
+         int Id { get; set; }
+         int GammeId { get; set; }
+         string CodeBarre { get; set; }
+         int MarqueId { get; set; }
+         string Debut { get; set; }
+         string Fin { get; set; }
 
-        public DtoGamme Gamme { get; set; }
-        public DtoMarque Marque { get; set; }
+         DtoGamme Gamme { get; set; }
+         DtoMarque Marque { get; set; }
     }
 }

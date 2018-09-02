@@ -15,16 +15,16 @@ namespace ORLserveur
         {
         }
 
-        public virtual DbSet<ElementGondole> ElementGondole { get; set; }
-        public virtual DbSet<Enseigne> Enseigne { get; set; }
-        public virtual DbSet<Gamme> Gamme { get; set; }
-        public virtual DbSet<Magasin> Magasin { get; set; }
-        public virtual DbSet<Marque> Marque { get; set; }
-        public virtual DbSet<Planche> Planche { get; set; }
+        public virtual DbSet<DtoElementGondole> ElementGondole { get; set; }
+        public virtual DbSet<DtoEnseigne> Enseigne { get; set; }
+        public virtual DbSet<DtoGamme> Gamme { get; set; }
+        public virtual DbSet<DtoMagasin> Magasin { get; set; }
+        public virtual DbSet<DtoMarque> Marque { get; set; }
+        public virtual DbSet<DtoPlanche> Planche { get; set; }
         public virtual DbSet<Produit> Produit { get; set; }
-        public virtual DbSet<Rayon> Rayon { get; set; }
-        public virtual DbSet<Utilisateur> Utilisateur { get; set; }
-        public virtual DbSet<Visite> Visite { get; set; }
+        public virtual DbSet<DtoRayon> Rayon { get; set; }
+        public virtual DbSet<DtoUtilisateur> Utilisateur { get; set; }
+        public virtual DbSet<DtoVisite> Visite { get; set; }
 
         // Unable to generate entity type for table 'planche_produit'. Please see the warning messages.
 
@@ -39,7 +39,7 @@ namespace ORLserveur
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<ElementGondole>(entity =>
+            modelBuilder.Entity<DtoElementGondole>(entity =>
             {
                 entity.ToTable("element_gondole");
 
@@ -63,7 +63,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_element_gondole_Rayon1");
             });
 
-            modelBuilder.Entity<Enseigne>(entity =>
+            modelBuilder.Entity<DtoEnseigne>(entity =>
             {
                 entity.HasKey(e => new { e.Id, e.Nom });
 
@@ -74,7 +74,7 @@ namespace ORLserveur
                 entity.Property(e => e.Nom).HasColumnType("varchar(45)");
             });
 
-            modelBuilder.Entity<Gamme>(entity =>
+            modelBuilder.Entity<DtoGamme>(entity =>
             {
                 entity.ToTable("gamme");
 
@@ -87,7 +87,7 @@ namespace ORLserveur
                 entity.Property(e => e.Nom).HasColumnType("varchar(150)");
             });
 
-            modelBuilder.Entity<Magasin>(entity =>
+            modelBuilder.Entity<DtoMagasin>(entity =>
             {
                 entity.ToTable("magasin");
 
@@ -120,7 +120,7 @@ namespace ORLserveur
                     .HasColumnType("varchar(150)");
             });
 
-            modelBuilder.Entity<Marque>(entity =>
+            modelBuilder.Entity<DtoMarque>(entity =>
             {
                 entity.ToTable("marque");
 
@@ -148,7 +148,7 @@ namespace ORLserveur
                     .HasColumnType("varchar(150)");
             });
 
-            modelBuilder.Entity<Planche>(entity =>
+            modelBuilder.Entity<DtoPlanche>(entity =>
             {
                 entity.ToTable("planche");
 
@@ -217,7 +217,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_Produit_Marque1");
             });
 
-            modelBuilder.Entity<Rayon>(entity =>
+            modelBuilder.Entity<DtoRayon>(entity =>
             {
                 entity.ToTable("rayon");
 
@@ -241,7 +241,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_Rayon_Magasin1");
             });
 
-            modelBuilder.Entity<Utilisateur>(entity =>
+            modelBuilder.Entity<DtoUtilisateur>(entity =>
             {
                 entity.ToTable("utilisateur");
 
@@ -275,7 +275,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_User_Marque1");
             });
 
-            modelBuilder.Entity<Visite>(entity =>
+            modelBuilder.Entity<DtoVisite>(entity =>
             {
                 entity.ToTable("visite");
 
