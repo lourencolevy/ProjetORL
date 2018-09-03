@@ -6,7 +6,6 @@ namespace ORLserveur.DTO
 {
     public class DtoMagasin 
     {
-
         public int Id { get; set; }
         public string Adresse1 { get; set; }
         public string Adresse2 { get; set; }

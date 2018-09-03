@@ -12,5 +12,6 @@ namespace ORLserveur.DTO
         public sbyte? Rupture { get; set; }
 
         public DtoElementGondole ElementGondole { get; set; }
+        public ICollection<DtoProduit> Planche { get; set; }
     }
 }
