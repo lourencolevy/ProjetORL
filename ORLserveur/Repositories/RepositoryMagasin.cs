@@ -1,4 +1,4 @@
-﻿using ORLserveur.repositories;
+﻿using ORLserveur.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +9,12 @@ namespace ORLserveur.Repositories
     /// <summary>
     /// RepositoryMagasin contient les requetes vers la bdbd pour le serviceMagasin
     /// </summary>
-    public class RepositoryMagasin : CrudRepository<orlContext, DtoMagasin>
+    public class RepositoryMagasin : CrudRepository<orlContext, Magasin>
     {
         private orlContext _context = new orlContext();
-        public RepositoryMagasin(): base()
+        public RepositoryMagasin() : base()
         {
 
-        }
-
-        public override IQueryable<DtoMagasin> FindAll()
-        {
-            IQueryable<DtoMagasin> query = _context.Set<DtoMagasin>();
-            return query;
         }
     }
 }

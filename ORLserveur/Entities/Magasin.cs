@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoMagasin : EntityBase
+    public partial class Magasin : EntityBase
     {
-        public DtoMagasin()
+        public Magasin()
         {
-            Rayon = new HashSet<DtoRayon>();
+            Rayon = new HashSet<Rayon>();
         }
 
         public int Id { get; set; }
@@ -20,6 +20,6 @@ namespace ORLserveur
         public string Typo { get; set; }
         public int EnseigneId { get; set; }
 
-        public ICollection<DtoRayon> Rayon { get; set; }
+        public ICollection<Rayon> Rayon { get; set; }
     }
 }

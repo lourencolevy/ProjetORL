@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoMarque : EntityBase
+    public partial class Marque : EntityBase
     {
-        public DtoMarque()
+        public Marque()
         {
             Produit = new HashSet<Produit>();
-            Utilisateur = new HashSet<DtoUtilisateur>();
+            Utilisateur = new HashSet<Utilisateur>();
         }
 
         public int Id { get; set; }
@@ -21,6 +21,6 @@ namespace ORLserveur
         public string Ville { get; set; }
 
         public ICollection<Produit> Produit { get; set; }
-        public ICollection<DtoUtilisateur> Utilisateur { get; set; }
+        public ICollection<Utilisateur> Utilisateur { get; set; }
     }
 }

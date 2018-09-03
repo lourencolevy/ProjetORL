@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoRayon : EntityBase
+    public partial class Rayon : EntityBase
     {
-        public DtoRayon()
+        public Rayon()
         {
-            ElementGondole = new HashSet<DtoElementGondole>();
+            ElementGondole = new HashSet<ElementGondole>();
         }
 
         public int Id { get; set; }
         public int MagasinId { get; set; }
         public string NumRayon { get; set; }
 
-        public DtoMagasin Magasin { get; set; }
-        public ICollection<DtoElementGondole> ElementGondole { get; set; }
+        public Magasin Magasin { get; set; }
+        public ICollection<ElementGondole> ElementGondole { get; set; }
     }
 }

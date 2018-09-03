@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoElementGondole : EntityBase
+    public partial class ElementGondole : EntityBase
     {
-        public DtoElementGondole()
+        public ElementGondole()
         {
-            Planche = new HashSet<DtoPlanche>();
+            Planche = new HashSet<Planche>();
         }
 
         public int Id { get; set; }
         public int RayonId { get; set; }
         public string Numero { get; set; }
 
-        public DtoRayon Rayon { get; set; }
-        public ICollection<DtoPlanche> Planche { get; set; }
+        public Rayon Rayon { get; set; }
+        public ICollection<Planche> Planche { get; set; }
     }
 }
