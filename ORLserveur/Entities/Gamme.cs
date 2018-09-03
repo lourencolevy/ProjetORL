@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoGamme : EntityBase
+    public partial class Gamme : EntityBase
     {
-        public DtoGamme()
+        public Gamme()
         {
             Produit = new HashSet<Produit>();
         }

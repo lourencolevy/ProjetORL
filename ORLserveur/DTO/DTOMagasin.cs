@@ -1,4 +1,4 @@
-﻿using ORLserveur.DTO.Interfaces.InterfacesBase;
+﻿using ORLserveur.DTO.;
 using System;
 using System.Collections.Generic;
 

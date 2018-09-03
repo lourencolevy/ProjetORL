@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ORLserveur.repositories
+namespace ORLserveur.Repositories
 {
     /// <summary>
     /// classe abstraite permettant d'avoir un Crud de base

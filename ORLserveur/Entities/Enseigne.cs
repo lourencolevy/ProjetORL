@@ -4,8 +4,9 @@ using System.Collections.Generic;
 
 namespace ORLserveur
 {
-    public partial class DtoEnseigne : EntityBase
+    public partial class Enseigne : EntityBase
     {
+       
         public int Id { get; set; }
         public string Nom { get; set; }
     }

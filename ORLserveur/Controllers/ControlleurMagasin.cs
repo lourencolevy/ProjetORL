@@ -36,12 +36,12 @@ namespace ORLserveur.Controllers
 
     [Route("api/produit")]
     [ApiController]
-    public class ControlleurIMagasin : Controller
+    public class ControlleurMagasin : Controller
     {
         //TODO créer l'objet ps de type ProduitService et l'utiliser pour implémenter les méthodes
         //private ServiceMagasin sm;
 
-        public ControlleurIMagasin()
+        public ControlleurMagasin()
         {
             //  this.sm = new ServiceMagasin();
         }
@@ -49,18 +49,18 @@ namespace ORLserveur.Controllers
         //TODO Implémenter
         // GET api/values
         [HttpGet]
-        public IEnumerable<IDtoProduit> Get()
+        public IEnumerable<DtoProduit> Get()
         {
-            IEnumerable<IDtoProduit> ListDtoProduit = null;
+            IEnumerable<DtoProduit> ListDtoProduit = null;
             return ListDtoProduit;
         }
 
         //TODO Implémenter
         // GET api/values/5
         [HttpGet("{id}")]
-        public IEnumerable<IDtoProduit> Get(int id)
+        public IEnumerable<DtoProduit> Get(int id)
         {
-            IEnumerable<IDtoProduit> ListDtoProduit = null;
+            IEnumerable<DtoProduit> ListDtoProduit = null;
             return ListDtoProduit;
         }
 

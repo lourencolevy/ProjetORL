@@ -13,7 +13,7 @@ namespace ORLserveur
         public string Debut { get; set; }
         public string Fin { get; set; }
 
-        public DtoGamme Gamme { get; set; }
-        public DtoMarque Marque { get; set; }
+        public Gamme Gamme { get; set; }
+        public Marque Marque { get; set; }
     }
 }
