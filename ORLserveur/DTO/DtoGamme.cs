@@ -19,6 +19,6 @@ namespace ORLserveur.DTO
         public int FamilleId { get; set; }
         public string Nom { get; set; }
 
-        public ICollection<Produit> Produit { get; set; }
+        public ICollection<DtoProduit> Produit { get; set; }
     }
 }

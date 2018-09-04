@@ -11,7 +11,7 @@ using ORLserveur.Entities;
 
 namespace ORLserveur
 {
-    public class Program : EntityBase
+    public class Program
     {
         public static void Main(string[] args)
         {

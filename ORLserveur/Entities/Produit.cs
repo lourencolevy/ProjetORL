@@ -2,10 +2,15 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.Entities
 {
     public partial class Produit : EntityBase
     {
+        public Produit()
+        {
+            PlancheProduit = new HashSet<PlancheProduit>();
+        }
+
         public int Id { get; set; }
         public int GammeId { get; set; }
         public string CodeBarre { get; set; }
@@ -15,5 +20,6 @@ namespace ORLserveur
 
         public Gamme Gamme { get; set; }
         public Marque Marque { get; set; }
+        public ICollection<PlancheProduit> PlancheProduit { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.Entities
 {
     public partial class Magasin : EntityBase
     {
@@ -20,6 +20,7 @@ namespace ORLserveur
         public string Typo { get; set; }
         public int EnseigneId { get; set; }
 
+        public Enseigne Enseigne { get; set; }
         public ICollection<Rayon> Rayon { get; set; }
     }
 }

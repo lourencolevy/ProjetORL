@@ -1,8 +1,7 @@
-﻿using ORLserveur.Entities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.Entities
 {
     public partial class ElementGondole : EntityBase
     {

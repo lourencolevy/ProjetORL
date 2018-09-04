@@ -1,9 +1,9 @@
-﻿using ORLserveur.Entities;
-using ORLserveur.Repositories;
+﻿using ORLserveur.Contexts.Entities;
+using ORLserveur.Entities;
 using System;
 using System.Collections.Generic;
 
-namespace ORLserveur
+namespace ORLserveur.Repositories
 {
     public partial class RepositoryPlanche : CrudRepository<orlContext, Planche>
     {

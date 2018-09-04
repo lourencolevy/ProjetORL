@@ -30,13 +30,13 @@ namespace ORLserveur.Services
             rm = new RepositoryMagasin();
         }
 
-        public IEnumerable<DtoMagasin> findAll()
-        {
-            // récupération des Magasin depuis la BDD
-            ICollection<DtoMagasin> Magasins = rm.FindAll().ToList();
-            // transformation en DTO
-            ICollection<DtoMagasin> DtoMagasins = MagasinDtoMagasin.Map(Magasins);
-            return DtoMagasins;
-        }
+        //public IEnumerable<DtoMagasin> findAll()
+        //{
+        //    // récupération des Magasin depuis la BDD
+        //    ICollection<DtoMagasin> Magasins = rm.FindAll().ToList();
+        //    // transformation en DTO
+        //    ICollection<DtoMagasin> DtoMagasins = MagasinDtoMagasin.Map(Magasins);
+        //    return DtoMagasins;
+        //}
     }
 }

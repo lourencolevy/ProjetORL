@@ -14,7 +14,7 @@ namespace ORLserveur.DTO
         public string CodePostal { get; set; }
         public string Ville { get; set; }
 
-        public ICollection<Produit> Produit { get; set; }
+        public ICollection<DtoProduit> Produit { get; set; }
         public ICollection<DtoUtilisateur> Utilisateur { get; set; }
     }
 }

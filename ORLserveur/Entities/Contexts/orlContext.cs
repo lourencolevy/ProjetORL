@@ -1,8 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using ORLserveur.Entities;
 
-namespace ORLserveur
+namespace ORLserveur.Contexts.Entities
 {
     public partial class orlContext : DbContext
     {
@@ -15,18 +16,17 @@ namespace ORLserveur
         {
         }
 
-        public virtual DbSet<DtoElementGondole> ElementGondole { get; set; }
-        public virtual DbSet<DtoEnseigne> Enseigne { get; set; }
-        public virtual DbSet<DtoGamme> Gamme { get; set; }
-        public virtual DbSet<DtoMagasin> Magasin { get; set; }
-        public virtual DbSet<DtoMarque> Marque { get; set; }
-        public virtual DbSet<DtoPlanche> Planche { get; set; }
+        public virtual DbSet<ElementGondole> ElementGondole { get; set; }
+        public virtual DbSet<Enseigne> Enseigne { get; set; }
+        public virtual DbSet<Gamme> Gamme { get; set; }
+        public virtual DbSet<Magasin> Magasin { get; set; }
+        public virtual DbSet<Marque> Marque { get; set; }
+        public virtual DbSet<Planche> Planche { get; set; }
+        public virtual DbSet<PlancheProduit> PlancheProduit { get; set; }
         public virtual DbSet<Produit> Produit { get; set; }
-        public virtual DbSet<DtoRayon> Rayon { get; set; }
-        public virtual DbSet<DtoUtilisateur> Utilisateur { get; set; }
-        public virtual DbSet<DtoVisite> Visite { get; set; }
-
-        // Unable to generate entity type for table 'planche_produit'. Please see the warning messages.
+        public virtual DbSet<Rayon> Rayon { get; set; }
+        public virtual DbSet<Utilisateur> Utilisateur { get; set; }
+        public virtual DbSet<Visite> Visite { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -39,7 +39,7 @@ namespace ORLserveur
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<DtoElementGondole>(entity =>
+            modelBuilder.Entity<ElementGondole>(entity =>
             {
                 entity.ToTable("element_gondole");
 
@@ -63,18 +63,18 @@ namespace ORLserveur
                     .HasConstraintName("fk_element_gondole_Rayon1");
             });
 
-            modelBuilder.Entity<DtoEnseigne>(entity =>
+            modelBuilder.Entity<Enseigne>(entity =>
             {
-                entity.HasKey(e => new { e.Id, e.Nom });
-
                 entity.ToTable("enseigne");
 
                 entity.Property(e => e.Id).HasColumnType("int(11)");
 
-                entity.Property(e => e.Nom).HasColumnType("varchar(45)");
+                entity.Property(e => e.Nom)
+                    .IsRequired()
+                    .HasColumnType("varchar(45)");
             });
 
-            modelBuilder.Entity<DtoGamme>(entity =>
+            modelBuilder.Entity<Gamme>(entity =>
             {
                 entity.ToTable("gamme");
 
@@ -87,7 +87,7 @@ namespace ORLserveur
                 entity.Property(e => e.Nom).HasColumnType("varchar(150)");
             });
 
-            modelBuilder.Entity<DtoMagasin>(entity =>
+            modelBuilder.Entity<Magasin>(entity =>
             {
                 entity.ToTable("magasin");
 
@@ -118,9 +118,15 @@ namespace ORLserveur
                 entity.Property(e => e.Ville)
                     .IsRequired()
                     .HasColumnType("varchar(150)");
+
+                entity.HasOne(d => d.Enseigne)
+                    .WithMany(p => p.Magasin)
+                    .HasForeignKey(d => d.EnseigneId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Magasin_Enseigne1");
             });
 
-            modelBuilder.Entity<DtoMarque>(entity =>
+            modelBuilder.Entity<Marque>(entity =>
             {
                 entity.ToTable("marque");
 
@@ -148,7 +154,7 @@ namespace ORLserveur
                     .HasColumnType("varchar(150)");
             });
 
-            modelBuilder.Entity<DtoPlanche>(entity =>
+            modelBuilder.Entity<Planche>(entity =>
             {
                 entity.ToTable("planche");
 
@@ -174,6 +180,56 @@ namespace ORLserveur
                     .HasForeignKey(d => d.ElementGondoleId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Planche_element_gondole1");
+            });
+
+            modelBuilder.Entity<PlancheProduit>(entity =>
+            {
+                entity.ToTable("planche_produit");
+
+                entity.HasIndex(e => e.PlancheId)
+                    .HasName("fk_Planche_has_Produit_Planche1_idx");
+
+                entity.HasIndex(e => e.ProduitId)
+                    .HasName("fk_Planche_has_Produit_Produit1_idx");
+
+                entity.HasIndex(e => e.VisiteId)
+                    .HasName("fk_Planche_Produit_Visite1_idx");
+
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.NombreProduit)
+                    .HasColumnName("Nombre_Produit")
+                    .HasColumnType("varchar(150)");
+
+                entity.Property(e => e.PlancheId)
+                    .HasColumnName("Planche_Id")
+                    .HasColumnType("int(11)");
+
+                entity.Property(e => e.ProduitId)
+                    .HasColumnName("Produit_Id")
+                    .HasColumnType("int(11)");
+
+                entity.Property(e => e.VisiteId)
+                    .HasColumnName("Visite_id")
+                    .HasColumnType("int(11)");
+
+                entity.HasOne(d => d.Planche)
+                    .WithMany(p => p.PlancheProduit)
+                    .HasForeignKey(d => d.PlancheId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Planche_has_Produit_Planche1");
+
+                entity.HasOne(d => d.Produit)
+                    .WithMany(p => p.PlancheProduit)
+                    .HasForeignKey(d => d.ProduitId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Planche_has_Produit_Produit1");
+
+                entity.HasOne(d => d.Visite)
+                    .WithMany(p => p.PlancheProduit)
+                    .HasForeignKey(d => d.VisiteId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_Planche_Produit_Visite1");
             });
 
             modelBuilder.Entity<Produit>(entity =>
@@ -217,7 +273,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_Produit_Marque1");
             });
 
-            modelBuilder.Entity<DtoRayon>(entity =>
+            modelBuilder.Entity<Rayon>(entity =>
             {
                 entity.ToTable("rayon");
 
@@ -241,7 +297,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_Rayon_Magasin1");
             });
 
-            modelBuilder.Entity<DtoUtilisateur>(entity =>
+            modelBuilder.Entity<Utilisateur>(entity =>
             {
                 entity.ToTable("utilisateur");
 
@@ -275,7 +331,7 @@ namespace ORLserveur
                     .HasConstraintName("fk_User_Marque1");
             });
 
-            modelBuilder.Entity<DtoVisite>(entity =>
+            modelBuilder.Entity<Visite>(entity =>
             {
                 entity.ToTable("visite");
 
