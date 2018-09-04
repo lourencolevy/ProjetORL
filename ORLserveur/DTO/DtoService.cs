@@ -38,7 +38,7 @@ namespace ORLserveur.DTO
         public ICollection<DtoGamme> ListGamme { get; set; }
 
         // Faut ajouter la classe PlancheProduit? 
-        //ICollection<IDtoPlancheProduit> ListePlancheProduit { get; set; }
+        ICollection<DtoPlancheProduit> ListePlancheProduit { get; set; }
 
         public decimal PourcRuptureProduit { get; set; }
         public decimal PourcFacingProduit { get; set; }

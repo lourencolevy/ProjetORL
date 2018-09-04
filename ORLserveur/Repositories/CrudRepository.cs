@@ -16,11 +16,9 @@ namespace ORLserveur.Repositories
     public abstract class CrudRepository<C, T>
      where T : EntityBase where C : DbContext, new()
     {
-
         private C _context = new C();
         public C Context
         {
-
             get { return _context; }
             set { _context = value; }
         }

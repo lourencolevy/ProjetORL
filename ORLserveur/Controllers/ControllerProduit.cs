@@ -18,18 +18,18 @@ namespace ORLserveur.Controllers
     ///     *ProduitService
     ///     
     /// Objet composé de plusieurs membres:
-    ///     *une methode Get avec plusieur surcharge qu'on listera listé ici
+    ///     *une methode Get avec plusieur surcharge qu'on listera ici
     ///         _ Get()
     ///         _ Get(ID)
     ///     *ListIdProduit
     ///     
-    ///     *une methode Post avec plusieur surcharge qu'on listera listé ici
+    ///     *une methode Post avec plusieur surcharge qu'on listera ici
     ///         _ Post()
     ///        
-    ///      *une methode Put avec plusieur surcharge qu'on listera listé ici
+    ///      *une methode Put avec plusieur surcharge qu'on listera ici
     ///         _ Put(Id,String Value)
     ///         
-    ///     *une methode Delete avec plusieur surcharge qu'on listera listé ici
+    ///     *une methode Delete avec plusieur surcharge qu'on listera ici
     ///         _ Delete(Id)
     /// 
     /// </summary>
