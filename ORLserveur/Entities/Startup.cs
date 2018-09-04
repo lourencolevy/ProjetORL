@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using ORLserveur.Services.Mappings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,6 +29,10 @@ namespace ORLserveur
 
             app.Run(async (context) =>
             {
+                Mapper.Initialize(cfg =>
+                {
+                    cfg.AddProfile(new MapperConfig());
+                });
                 await context.Response.WriteAsync("Hello World!");
             });
         }
