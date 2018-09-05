@@ -14,8 +14,8 @@ namespace ORLserveur.DTO
         public int VisiteId { get; set; }
         public string NombreProduit { get; set; }
 
-        public Planche Planche { get; set; }
-        public Produit Produit { get; set; }
-        public Visite Visite { get; set; }
+        public DtoPlanche Planche { get; set; }
+        public DtoProduit Produit { get; set; }
+        public DtoVisite Visite { get; set; }
     }
 }

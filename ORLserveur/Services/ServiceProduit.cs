@@ -22,18 +22,18 @@ namespace ORLserveur.Repositories
             PPRepo = new RepositoryPlancheProduit();
             ProduitRepo = new RepositoryProduit();
         }
-        public ICollection<DtoProduit> GetProductByPlanche(DtoPlanche aPlanche)
-        {
-            Planche planche = Mapper.Map<DtoPlanche, Planche>(aPlanche);
-            ICollection<DtoProduit> listProd = new List<DtoProduit>();
-            ICollection<PlancheProduit> listPlancheProd = PPRepo.GetProductsByPlanche(planche).ToList();
-            foreach (var item in listPlancheProd)
-            {
-                DtoProduit b = Mapper.Map<Produit, DtoProduit>
-                    (ProduitRepo.FindById(item.PlancheId).ToList().FirstOrDefault());
-            }
-            return listProd;
-        }
+        //public ICollection<DtoProduit> GetProductByPlanche(DtoPlanche aPlanche)
+        //{
+        //    Planche planche = Mapper.Map<DtoPlanche, Planche>(aPlanche);
+        //    ICollection<DtoProduit> listProd = new List<DtoProduit>();
+        //    ICollection<PlancheProduit> listPlancheProd = PPRepo.GetProductsByPlanche(planche).ToList();
+        //    foreach (var item in listPlancheProd)
+        //    {
+        //        DtoProduit b = Mapper.Map<Produit, DtoProduit>
+        //            (ProduitRepo.FindById(item.PlancheId).ToList().FirstOrDefault());
+        //    }
+        //    return listProd;
+        //}
 
         public void AjouterProduit(DtoProduit aDtoProduit)
         {

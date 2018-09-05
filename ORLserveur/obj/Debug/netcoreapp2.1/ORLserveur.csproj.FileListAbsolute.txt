@@ -2,7 +2,6 @@ C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\bin\Debug\netcoreapp2.1\
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\bin\Debug\netcoreapp2.1\ORLserveur.runtimeconfig.json
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\bin\Debug\netcoreapp2.1\ORLserveur.runtimeconfig.dev.json
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\bin\Debug\netcoreapp2.1\ORLserveur.dll
-C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.csprojAssemblyReference.cache
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.csproj.CoreCompileInputs.cache
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.RazorAssemblyInfo.cache
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.RazorAssemblyInfo.cs
@@ -12,3 +11,4 @@ C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\bin\Debug\netcoreapp2.1\ORLserveur.pdb
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.dll
 C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.pdb
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORLserveur\obj\Debug\netcoreapp2.1\ORLserveur.csprojAssemblyReference.cache

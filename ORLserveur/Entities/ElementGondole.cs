@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ORLserveur.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace ORLserveur.Entities

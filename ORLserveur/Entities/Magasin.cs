@@ -19,6 +19,7 @@ namespace ORLserveur.Entities
         public string Ville { get; set; }
         public string Typo { get; set; }
         public int EnseigneId { get; set; }
+        public sbyte? ProduitPresent { get; set; }
 
         public Enseigne Enseigne { get; set; }
         public ICollection<Rayon> Rayon { get; set; }

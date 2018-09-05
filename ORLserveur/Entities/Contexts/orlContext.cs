@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using ORLserveur.Entities;
 
-namespace ORLserveur.Contexts.Entities
+namespace ORLserveur.Entities.Contexts
 {
     public partial class orlContext : DbContext
     {
@@ -113,6 +113,10 @@ namespace ORLserveur.Contexts.Entities
                     .HasColumnName("Enseigne_id")
                     .HasColumnType("int(11)");
 
+                entity.Property(e => e.ProduitPresent)
+                    .HasColumnType("tinyint(4)")
+                    .HasDefaultValueSql("'0'");
+
                 entity.Property(e => e.Typo).HasColumnType("varchar(150)");
 
                 entity.Property(e => e.Ville)
@@ -197,9 +201,7 @@ namespace ORLserveur.Contexts.Entities
 
                 entity.Property(e => e.Id).HasColumnType("int(11)");
 
-                entity.Property(e => e.NombreProduit)
-                    .HasColumnName("Nombre_Produit")
-                    .HasColumnType("varchar(150)");
+                entity.Property(e => e.NombreProduit).HasColumnType("int(11)");
 
                 entity.Property(e => e.PlancheId)
                     .HasColumnName("Planche_Id")
@@ -259,6 +261,10 @@ namespace ORLserveur.Contexts.Entities
                 entity.Property(e => e.MarqueId)
                     .HasColumnName("Marque_Id")
                     .HasColumnType("int(11)");
+
+                entity.Property(e => e.MonProduit)
+                    .HasColumnType("tinyint(4)")
+                    .HasDefaultValueSql("'0'");
 
                 entity.HasOne(d => d.Gamme)
                     .WithMany(p => p.Produit)

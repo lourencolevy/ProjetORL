@@ -36,12 +36,12 @@ namespace ORLserveur.Controllers
 
     [Route("api/produit")]
     [ApiController]
-    public class ControlleurMagasin : Controller
+    public class ControllerMagasin : Controller
     {
         //TODO créer l'objet ps de type ProduitService et l'utiliser pour implémenter les méthodes
         //private ServiceMagasin sm;
 
-        public ControlleurMagasin()
+        public ControllerMagasin()
         {
             //  this.sm = new ServiceMagasin();
         }

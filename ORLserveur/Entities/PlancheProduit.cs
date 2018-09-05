@@ -10,7 +10,7 @@ namespace ORLserveur.Entities
         public int PlancheId { get; set; }
         public int ProduitId { get; set; }
         public int VisiteId { get; set; }
-        public string NombreProduit { get; set; }
+        public int? NombreProduit { get; set; }
 
         public Planche Planche { get; set; }
         public Produit Produit { get; set; }

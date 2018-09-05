@@ -1,5 +1,5 @@
-﻿using ORLserveur.Contexts.Entities;
-using ORLserveur.Entities;
+﻿using ORLserveur.Entities;
+using ORLserveur.Entities.Contexts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
