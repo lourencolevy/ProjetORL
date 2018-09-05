@@ -36,7 +36,7 @@ namespace ORLserveur
             return Mapper.Map<Planche, DtoPlanche>
                 (RepoPlanche.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoPlanche> TrouverPlanches()
+        public ICollection<DtoPlanche> ListerPlanches()
         {
             return Mapper.Map<ICollection<Planche>, ICollection<DtoPlanche>>(RepoPlanche.FindAll().ToList());
         }

@@ -14,6 +14,7 @@ namespace ORLserveur.DTO
         public int MarqueId { get; set; }
 
         public DtoMarque Marque { get; set; }
-        public ICollection<DtoVisite> Visite { get; set; }
+        public ICollection<DtoVisite> Visites { get; set; }
+        public ICollection<DtoGamme> Gammes { get; set; }
     }
 }

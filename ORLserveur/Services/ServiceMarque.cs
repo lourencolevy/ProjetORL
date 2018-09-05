@@ -36,7 +36,7 @@ namespace ORLserveur.Repositories
             return Mapper.Map<Marque, DtoMarque>
                 (RepoMarque.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoMarque> TrouverMarques()
+        public ICollection<DtoMarque> ListerMarques()
         {
             return Mapper.Map<ICollection<Marque>, ICollection<DtoMarque>>(RepoMarque.FindAll().ToList());
         }

@@ -35,7 +35,7 @@ namespace ORLserveur.Repositories
             return Mapper.Map<Gamme, DtoGamme>
                 (RepoGamme.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoGamme> TrouverGammes()
+        public ICollection<DtoGamme> ListerGammes()
         {
             return Mapper.Map<ICollection<Gamme>, ICollection<DtoGamme>>(RepoGamme.FindAll().ToList());
         }

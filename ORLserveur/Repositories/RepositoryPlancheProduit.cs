@@ -9,6 +9,11 @@ namespace ORLserveur.Repositories
 {
     public class RepositoryPlancheProduit : CrudRepository<orlContext, PlancheProduit>
     {
+        public RepositoryPlancheProduit() : base()
+        {
+
+        }
+            
         public IQueryable<PlancheProduit> GetProductsByPlanche(Planche ePlanche)
         {
             orlContext context = new orlContext();

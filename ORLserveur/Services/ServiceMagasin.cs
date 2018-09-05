@@ -39,7 +39,7 @@ namespace ORLserveur.Repositories
             return Mapper.Map<Magasin, DtoMagasin>
                 (RepoMagasin.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoMagasin> TrouverMagasins()
+        public ICollection<DtoMagasin> ListerMagasins()
         {
             return Mapper.Map<ICollection<Magasin>, ICollection<DtoMagasin>>(RepoMagasin.FindAll().ToList());
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ORLserveur.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace ORLserveur.DTO
@@ -13,7 +14,9 @@ namespace ORLserveur.DTO
         public string Ville { get; set; }
         public string Typo { get; set; }
         public int EnseigneId { get; set; }
+        public sbyte? ProduitPresent { get; set; }
 
-        public ICollection<DtoRayon> ListDtoRayon { get; set; }
+        public Enseigne Enseigne { get; set; }
+        public ICollection<Rayon> Rayon { get; set; }
     }
 }

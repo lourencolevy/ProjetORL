@@ -36,7 +36,7 @@ namespace ORLserveur
             return Mapper.Map<Rayon, DtoRayon>
                 (RepoRayon.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoRayon> TrouverRayons()
+        public ICollection<DtoRayon> ListerRayons()
         {
             return Mapper.Map<ICollection<Rayon>, ICollection<DtoRayon>>(RepoRayon.FindAll().ToList());
         }

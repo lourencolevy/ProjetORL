@@ -36,7 +36,7 @@ namespace ORLserveur.DTO.Repositories
             return Mapper.Map<ElementGondole, DtoElementGondole>
                 (RepoElementGondole.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoElementGondole> TrouverElementGondoles()
+        public ICollection<DtoElementGondole> ListerElementGondoles()
         {
             return Mapper.Map<ICollection<ElementGondole>, ICollection<DtoElementGondole>>(RepoElementGondole.FindAll().ToList());
         }

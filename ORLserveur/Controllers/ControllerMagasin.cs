@@ -25,13 +25,10 @@ namespace ORLserveur.Controllers
     ///     
     ///     *une methode Post avec plusieur surcharge qu'on listera listé ici
     ///         _ Post()
-    ///        
     ///      *une methode Put avec plusieur surcharge qu'on listera listé ici
     ///         _ Put(Id,String Value)
-    ///         
     ///     *une methode Delete avec plusieur surcharge qu'on listera listé ici
     ///         _ Delete(Id)
-    /// 
     /// </summary>
 
     [Route("api/produit")]

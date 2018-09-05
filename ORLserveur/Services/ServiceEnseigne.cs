@@ -35,7 +35,7 @@ namespace ORLserveur.Repositories
             return Mapper.Map<Enseigne, DtoEnseigne>
                 (RepoEnseigne.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoEnseigne> TrouverEnseignes()
+        public ICollection<DtoEnseigne> ListerEnseignes()
         {
             return Mapper.Map<ICollection<Enseigne>, ICollection<DtoEnseigne>>(RepoEnseigne.FindAll().ToList());
         }

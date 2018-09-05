@@ -35,7 +35,7 @@ namespace ORLserveur
             return Mapper.Map<Utilisateur, DtoUtilisateur>
                 (RepoUtilisateur.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoUtilisateur> TrouverUtilisateurs()
+        public ICollection<DtoUtilisateur> ListerUtilisateurs()
         {
             return Mapper.Map<ICollection< Utilisateur >, ICollection<DtoUtilisateur>>(RepoUtilisateur.FindAll().ToList());
         }

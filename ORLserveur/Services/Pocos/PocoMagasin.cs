@@ -24,5 +24,6 @@ namespace ORLserveur.Services.Pocos
     /// </summary>
     public class PocoMagasin : IPoco
     {
+        
     }
 }

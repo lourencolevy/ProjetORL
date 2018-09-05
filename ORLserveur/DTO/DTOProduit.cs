@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ORLserveur.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -30,9 +31,13 @@ namespace ORLserveur.DTO
         public int MarqueId { get; set; }
         public string Debut { get; set; }
         public string Fin { get; set; }
+        public sbyte? MonProduit { get; set; }
+        public decimal DistributionNumerique { get; set; }
 
-        public DtoGamme Gamme { get; set; }
-        public DtoMarque Marque { get; set; }
-        
+        public Gamme Gamme { get; set; }
+        public Marque Marque { get; set; }
+        public ICollection<PlancheProduit> PlancheProduit { get; set; }
+        public ICollection<DtoMagasin> MagasinsProduitPresent { get; set; }
+
     }
 }

@@ -36,7 +36,7 @@ namespace ORLserveur
             return Mapper.Map<Visite, DtoVisite>
                 (RepoVisite.FindById(aId).FirstOrDefault());
         }
-        public ICollection<DtoVisite> TrouverVisites()
+        public ICollection<DtoVisite> ListerVisites()
         {
             return Mapper.Map<ICollection<Visite>, ICollection<DtoVisite>>(RepoVisite.FindAll().ToList());
         }
