@@ -23,16 +23,19 @@ namespace ORLserveur.Repositories
         {
             Magasin oMagasin = Mapper.Map<DtoMagasin, Magasin>(aDtoMagasin);
             RepoMagasin.Add(oMagasin);
+            RepoMagasin.Save();
         }
         public void ModifierMagasin(DtoMagasin aDtoMagasin)
         {
             Magasin oMagasin = Mapper.Map<DtoMagasin, Magasin>(aDtoMagasin);
             RepoMagasin.Edit(oMagasin);
+            RepoMagasin.Save();
         }
         public void SupprimerMagasin(DtoMagasin aDtoMagasin)
         {
             Magasin oMagasin = Mapper.Map<DtoMagasin, Magasin>(aDtoMagasin);
             RepoMagasin.Delete(oMagasin);
+            RepoMagasin.Save();
         }
         public DtoMagasin TrouverMagasinAvecId(int aId)
         {

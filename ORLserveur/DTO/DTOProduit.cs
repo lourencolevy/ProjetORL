@@ -32,7 +32,7 @@ namespace ORLserveur.DTO
         public string Debut { get; set; }
         public string Fin { get; set; }
         public sbyte? MonProduit { get; set; }
-        public decimal DistributionNumerique { get; set; }
+        public decimal DistributionNumerique { get; set; } 
 
         public Gamme Gamme { get; set; }
         public Marque Marque { get; set; }

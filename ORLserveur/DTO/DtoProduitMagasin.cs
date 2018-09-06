@@ -11,8 +11,8 @@ namespace ORLserveur.DTO
         public DtoMagasin oMagasin { get; set; }
         public int Facing { get; set; }
         public decimal PresenceProduit {get;set;}
-        public List<DtoProduit> ProduitsClient { get; set; }
-        public List<DtoProduit> ProduitsConcurrent { get; set; }
-        public List<DtoVisite> Visites { get; set; }
+        public ICollection<DtoProduit> ProduitsClient { get; set; }
+        public ICollection<DtoProduit> ProduitsConcurrent { get; set; }
+        public ICollection<DtoVisite> VisitesProduitMagasin { get; set; }
     }
 }

@@ -5,8 +5,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
+using ORLserveur.DTO.Repositories;
+using ORLserveur.DTO;
 
-namespace ORLserveur.DTO.Repositories
+namespace ORLserveur.Services
 {
     public partial class ServiceElementGondole
     {
@@ -20,16 +22,19 @@ namespace ORLserveur.DTO.Repositories
         {
             ElementGondole oElementGondole = Mapper.Map<DtoElementGondole, ElementGondole>(aDtoElementGondole);
             RepoElementGondole.Add(oElementGondole);
+            RepoElementGondole.Save();
         }
         public void ModifierElementGondole(DtoElementGondole aDtoElementGondole)
         {
             ElementGondole oElementGondole = Mapper.Map<DtoElementGondole, ElementGondole>(aDtoElementGondole);
             RepoElementGondole.Edit(oElementGondole);
+            RepoElementGondole.Save();
         }
         public void SupprimerElementGondole(DtoElementGondole aDtoElementGondole)
         {
             ElementGondole oElementGondole = Mapper.Map<DtoElementGondole, ElementGondole>(aDtoElementGondole);
             RepoElementGondole.Delete(oElementGondole);
+            RepoElementGondole.Save();
         }
         public DtoElementGondole TrouverAvecId(int aId)
         {

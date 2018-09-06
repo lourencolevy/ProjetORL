@@ -21,16 +21,19 @@ namespace ORLserveur.Services
         {
             PlancheProduit oPlancheProduit = Mapper.Map<DtoPlancheProduit, PlancheProduit>(aDtoPlancheProduit);
             RepoPlancheProduit.Add(oPlancheProduit);
+            RepoPlancheProduit.Save();
         }
         public void ModifierPlancheProduit(DtoPlancheProduit aDtoPlancheProduit)
         {
             PlancheProduit oPlancheProduit = Mapper.Map<DtoPlancheProduit, PlancheProduit>(aDtoPlancheProduit);
             RepoPlancheProduit.Edit(oPlancheProduit);
+            RepoPlancheProduit.Save();
         }
         public void SupprimerPlancheProduit(DtoPlancheProduit aDtoPlancheProduit)
         {
             PlancheProduit oPlancheProduit = Mapper.Map<DtoPlancheProduit, PlancheProduit>(aDtoPlancheProduit);
             RepoPlancheProduit.Delete(oPlancheProduit);
+            RepoPlancheProduit.Save();
         }
         public DtoPlancheProduit TrouverPlancheProduitAvecId(int aId)
         {

@@ -19,16 +19,19 @@ namespace ORLserveur
         {
             Utilisateur util = Mapper.Map<DtoUtilisateur, Utilisateur>(aDtoUtilisateur);
             RepoUtilisateur.Add(util);
+            RepoUtilisateur.Save();
         }
         public void ModifierUtilisateur(DtoUtilisateur aDtoUtilisateur)
         {
             Utilisateur util = Mapper.Map<DtoUtilisateur, Utilisateur>(aDtoUtilisateur);
             RepoUtilisateur.Edit(util);
+            RepoUtilisateur.Save();
         }
         public void SupprimerUtilisateur(DtoUtilisateur aDtoUtilisateur)
         {
             Utilisateur util = Mapper.Map<DtoUtilisateur, Utilisateur>(aDtoUtilisateur);
             RepoUtilisateur.Delete(util);
+            RepoUtilisateur.Save();
         }
         public DtoUtilisateur TrouverAvecId(int aId)
         {

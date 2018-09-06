@@ -19,16 +19,19 @@ namespace ORLserveur.Repositories
         {
             Gamme oGamme = Mapper.Map<DtoGamme, Gamme>(aDtoGamme);
             RepoGamme.Add(oGamme);
+            RepoGamme.Save();
         }
         public void ModifierGamme(DtoGamme aDtoGamme)
         {
             Gamme oGamme = Mapper.Map<DtoGamme, Gamme>(aDtoGamme);
             RepoGamme.Edit(oGamme);
+            RepoGamme.Save();
         }
         public void SupprimerGamme(DtoGamme aDtoGamme)
         {
             Gamme oGamme = Mapper.Map<DtoGamme, Gamme>(aDtoGamme);
             RepoGamme.Delete(oGamme);
+            RepoGamme.Save();
         }
         public DtoGamme TrouverGammeAvecId(int aId)
         {

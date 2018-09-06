@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ORLserveur.Repositories
 {
-    public class RepositoryProduitMagasin : CrudRepository<orlContext, ElementGondole>
+    public class RepositoryProduitMagasin : CrudRepository <orlContext, ElementGondole>
     {
 
     }

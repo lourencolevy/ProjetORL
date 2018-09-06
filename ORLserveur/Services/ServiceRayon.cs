@@ -20,16 +20,19 @@ namespace ORLserveur
         {
             Rayon oRayon = Mapper.Map<DtoRayon, Rayon>(aDtoRayon);
             RepoRayon.Add(oRayon);
+            RepoRayon.Save();
         }
         public void ModifierRayon(DtoRayon aDtoRayon)
         {
             Rayon oRayon = Mapper.Map<DtoRayon, Rayon>(aDtoRayon);
             RepoRayon.Edit(oRayon);
+            RepoRayon.Save();
         }
         public void SupprimerRayon(DtoRayon aDtoRayon)
         {
             Rayon oRayon = Mapper.Map<DtoRayon, Rayon>(aDtoRayon);
             RepoRayon.Delete(oRayon);
+            RepoRayon.Save();
         }
         public DtoRayon TrouverRayonAvecId(int aId)
         {

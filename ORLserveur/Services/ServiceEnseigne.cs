@@ -19,16 +19,19 @@ namespace ORLserveur.Repositories
         {
             Enseigne oEnseigne = Mapper.Map<DtoEnseigne, Enseigne>(aDtoEnseigne);
             RepoEnseigne.Add(oEnseigne);
+            RepoEnseigne.Save();
         }
         public void ModifierEnseigne(DtoEnseigne aDtoEnseigne)
         {
             Enseigne oEnseigne = Mapper.Map<DtoEnseigne, Enseigne>(aDtoEnseigne);
             RepoEnseigne.Edit(oEnseigne);
+            RepoEnseigne.Save();
         }
         public void SupprimerEnseigne(DtoEnseigne aDtoEnseigne)
         {
             Enseigne oEnseigne = Mapper.Map<DtoEnseigne, Enseigne>(aDtoEnseigne);
             RepoEnseigne.Delete(oEnseigne);
+            RepoEnseigne.Save();
         }
         public DtoEnseigne TrouverAvecId(int aId)
         {

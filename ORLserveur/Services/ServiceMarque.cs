@@ -20,16 +20,19 @@ namespace ORLserveur.Repositories
         {
             Marque oMarque = Mapper.Map<DtoMarque, Marque>(aDtoMarque);
             RepoMarque.Add(oMarque);
+            RepoMarque.Save();
         }
         public void ModifierMarque(DtoMarque aDtoMarque)
         {
             Marque oMarque = Mapper.Map<DtoMarque, Marque>(aDtoMarque);
             RepoMarque.Edit(oMarque);
+            RepoMarque.Save();
         }
         public void SupprimerMarque(DtoMarque aDtoMarque)
         {
             Marque oMarque = Mapper.Map<DtoMarque, Marque>(aDtoMarque);
             RepoMarque.Delete(oMarque);
+            RepoMarque.Save();
         }
         public DtoMarque TrouverMarqueAvecId(int aId)
         {

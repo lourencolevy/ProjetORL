@@ -20,16 +20,19 @@ namespace ORLserveur
         {
             Planche oPlanche = Mapper.Map<DtoPlanche, Planche>(aDtoPlanche);
             RepoPlanche.Add(oPlanche);
+            RepoPlanche.Save();
         }
         public void ModifierPlanche(DtoPlanche aDtoPlanche)
         {
             Planche oPlanche = Mapper.Map<DtoPlanche, Planche>(aDtoPlanche);
             RepoPlanche.Edit(oPlanche);
+            RepoPlanche.Save();
         }
         public void SupprimerPlanche(DtoPlanche aDtoPlanche)
         {
             Planche oPlanche = Mapper.Map<DtoPlanche, Planche>(aDtoPlanche);
             RepoPlanche.Delete(oPlanche);
+            RepoPlanche.Save();
         }
         public DtoPlanche TrouverPlancheAvecId(int aId)
         {

@@ -20,16 +20,19 @@ namespace ORLserveur
         {
             Visite oVisite = Mapper.Map<DtoVisite, Visite>(aVisite);
             RepoVisite.Add(oVisite);
+            RepoVisite.Save();
         }
         public void ModifierVisite(DtoVisite aDtoVisite)
         {
             Visite oVisite = Mapper.Map<DtoVisite, Visite>(aDtoVisite);
             RepoVisite.Edit(oVisite);
+            RepoVisite.Save();
         }
         public void SupprimerVisite(DtoVisite aDtoVisite)
         {
             Visite oVisite = Mapper.Map<DtoVisite, Visite>(aDtoVisite);
             RepoVisite.Delete(oVisite);
+            RepoVisite.Save();
         }
         public DtoVisite TrouverVisiteAvecId(int aId)
         {
