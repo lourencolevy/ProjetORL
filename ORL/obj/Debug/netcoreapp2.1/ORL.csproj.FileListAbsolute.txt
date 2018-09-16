@@ -1,0 +1,14 @@
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\bin\Debug\netcoreapp2.1\ORL.deps.json
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\bin\Debug\netcoreapp2.1\ORL.runtimeconfig.json
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\bin\Debug\netcoreapp2.1\ORL.runtimeconfig.dev.json
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\bin\Debug\netcoreapp2.1\ORL.dll
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\bin\Debug\netcoreapp2.1\ORL.pdb
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.csprojAssemblyReference.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.csproj.CoreCompileInputs.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.RazorAssemblyInfo.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.RazorAssemblyInfo.cs
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.AssemblyInfoInputs.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.AssemblyInfo.cs
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.RazorTargetAssemblyInfo.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.dll
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netcoreapp2.1\ORL.pdb

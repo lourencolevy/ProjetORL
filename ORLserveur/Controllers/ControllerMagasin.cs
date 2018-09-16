@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ORLserveur.DTO;
+using ORL.Bll.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,18 +46,18 @@ namespace ORLserveur.Controllers
         //TODO Implémenter
         // GET api/values
         [HttpGet]
-        public IEnumerable<DtoProduit> Get()
+        public IEnumerable<DtoMagasin> Get()
         {
-            IEnumerable<DtoProduit> ListDtoProduit = null;
+            IEnumerable<DtoMagasin> ListDtoProduit = null;
             return ListDtoProduit;
         }
 
         //TODO Implémenter
         // GET api/values/5
         [HttpGet("{id}")]
-        public IEnumerable<DtoProduit> Get(int id)
+        public IEnumerable<DtoMagasin> Get(int id)
         {
-            IEnumerable<DtoProduit> ListDtoProduit = null;
+            IEnumerable<DtoMagasin> ListDtoProduit = null;
             return ListDtoProduit;
         }
 

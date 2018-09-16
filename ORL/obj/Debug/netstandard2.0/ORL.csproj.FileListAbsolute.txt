@@ -1,0 +1,4 @@
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netstandard2.0\ORL.csprojAssemblyReference.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netstandard2.0\ORL.csproj.CoreCompileInputs.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netstandard2.0\ORL.AssemblyInfoInputs.cache
+C:\Users\lourenco levy\Desktop\t\ORL serveur\ORL\obj\Debug\netstandard2.0\ORL.AssemblyInfo.cs

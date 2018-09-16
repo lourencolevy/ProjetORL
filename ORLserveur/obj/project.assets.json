@@ -4408,6 +4408,23 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "ORL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "AutoMapper": "7.0.1",
+          "Microsoft.EntityFrameworkCore": "2.1.2",
+          "Microsoft.NETCore.App": "2.1.0",
+          "Pomelo.EntityFrameworkCore.MySql": "2.1.1",
+          "Pomelo.EntityFrameworkCore.MySql.Design": "1.1.2"
+        },
+        "compile": {
+          "bin/placeholder/ORL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ORL.dll": {}
+        }
       }
     }
   },
@@ -11674,6 +11691,11 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "ORL/1.0.0": {
+      "type": "project",
+      "path": "../ORL/ORL.csproj",
+      "msbuildProject": "../ORL/ORL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -11683,6 +11705,7 @@
       "Microsoft.EntityFrameworkCore >= 2.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.2",
       "Microsoft.NETCore.App >= 2.1.0",
+      "ORL >= 1.0.0",
       "Pomelo.EntityFrameworkCore.MySql >= 2.1.1",
       "Pomelo.EntityFrameworkCore.MySql.Design >= 1.1.2"
     ]
@@ -11716,7 +11739,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lourenco levy\\Desktop\\t\\ORL serveur\\ORL\\ORL.csproj": {
+              "projectPath": "C:\\Users\\lourenco levy\\Desktop\\t\\ORL serveur\\ORL\\ORL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
